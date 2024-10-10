@@ -80,7 +80,7 @@ const settingsLinkStyle = {
   color: "#fff",
   textDecoration: "none",
 };
-const settingsIconStyle = {
-  fontSize: "24px",
-  color: "#000",
-};
+// const settingsIconStyle = {
+//   fontSize: "24px",
+//   color: "#000",
+// };

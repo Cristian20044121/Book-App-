@@ -36,6 +36,7 @@ export const Sidebar = () => {
                     fontWeight: "600",
                     marginLeft: "10px",
                     lineHeight: 2,
+                    marginRight: "0.5rem",
                   }}
                 >
                   {list.icon}
@@ -74,8 +75,4 @@ const listItemStyle = {
   boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
   cursor: "pointer",
   borderRadius: "10px",
-};
-
-const iconStyle = {
-  marginRight: "0.5rem",
 };
