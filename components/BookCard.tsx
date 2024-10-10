@@ -1,6 +1,5 @@
 "use client"; // Declaración para asegurarse de que este archivo se ejecute en el lado del cliente
 import React from "react";
-import Image from "next/image";
 
 // Definir la interfaz para los props
 interface BookCardProps {
@@ -18,13 +17,7 @@ const BookCard: React.FC<BookCardProps> = ({
 }) => {
   return (
     <div style={cardStyle} onClick={onClick}>
-      <Image
-        src={coverImage}
-        alt={title}
-        style={imageStyle}
-        width={200}
-        height={200}
-      />
+      <img src={coverImage} alt={title} style={imageStyle} />
       <div style={contentStyle}>
         <h3 style={titleStyle}>{title}</h3>
         <p style={descriptionStyle}>{description}</p>
