@@ -4,6 +4,8 @@ import {motion} from 'framer-motion'
 import {Header} from './Header'
 import {Sidebar} from './Sidebar'
 import { BookCard } from './BookCard'
+import Link from "next/link";
+
 export const books = [
     { id: 1,author:'William Shakespearee', title: 'Soul',image:'https://marketplace.canva.com/EAFaQMYuZbo/1/0/1003w/canva-brown-rusty-mystery-novel-book-cover-hG1QhA7BiBU.jpg' , description:'A book review is a form of literary criticism in which a book is merely described or analyzed. ',content:`<p>
     William Shakespeare's "Romeo and Juliet" is a timeless tale of love, fate, and tragedy that has captivated audiences for centuries. Set in Verona, Italy, the play tells the story of two young lovers from feuding families, whose passion ultimately leads to their untimely deaths. Through rich language, vivid characters, and poignant themes, Shakespeare explores the complexities of human emotion and the consequences of impulsive actions.
@@ -424,9 +426,15 @@ export const Home = () => {
                             initial={{opacity:0, x:200*(i+1)}} animate={{opacity: 1, x:0}}
                             key={book.id}
                             >
-                                <a href={`/boom/${book.id}`} style={{textDecoration:'none'}}>
-                                    <BookCard title={book.title} description={book.description} coverImage={book.image}/>
-                                </a>
+
+<Link href={`/boom/${book.id}`} style={{ textDecoration: 'none' }}>
+  <BookCard
+    title={book.title}
+    description={book.description}
+    coverImage={book.image}
+  />
+</Link>
+
                             </motion.li>
                         ))}
                     </ul>
