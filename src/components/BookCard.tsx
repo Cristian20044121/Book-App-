@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+import Image from 'next/image'
 interface BookCardProps {
     title: string;
     description: string;
@@ -10,7 +11,7 @@ interface BookCardProps {
   export const BookCard: React.FC<BookCardProps> = ({ title, description, coverImage, onClick }) => {
     return (
       <div style={cardStyle} onClick={onClick} role="button" tabIndex={0} onKeyPress={onClick}>
-        <img src={coverImage} alt={`Cover of ${title}`} style={imageStyle} />
+        <Image src={coverImage} alt={`Cover of ${title}`} style={imageStyle} />
         <div style={contentStyle}>
           <h3 style={titleStyle}>{title}</h3>
           <p style={descriptionStyle}>{description}</p>

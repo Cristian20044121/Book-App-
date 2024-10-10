@@ -17,39 +17,32 @@ export const Sidebar = () => {
   return (
     <>
       {MenuList.map((list, i) => (
-        <motion.div
+        <motion.li
+          key={list.id}
+          style={listItemStyle}
+          whileHover={{ scale: 1.1 }}
           transition={{ type: "spring", damping: 22, mass: 0.99 }}
           initial={{ opacity: 0, x: -2000 * (i + 1) }}
           animate={{ opacity: 1, x: 0 }}
         >
-          <ul style={listStyle}>
-            {
-              <motion.li
-                style={listItemStyle}
-                whileHover={{ scale: 1.1 }}
-                key={i}
-              >
-                <motion.span
-                  transition={{ type: "spring", damping: 30, mass: 0.99 }}
-                  initial={{ opacity: 0, x: -10000 * (i + 1) }}
-                  animate={{ opacity: 1, x: 0 }}
-                  style={{
-                    color: "#000",
-                    textDecoration: "none",
-                    fontSize: "14px",
-                    fontWeight: "600",
-                    marginLeft: "10px",
-                    lineHeight: 2,
-                    marginRight: "0.5rem",
-                  }}
-                >
-                  {list.icon}
-                  {list.title}
-                </motion.span>
-              </motion.li>
-            }
-          </ul>
-        </motion.div>
+          <motion.span
+            transition={{ type: "spring", damping: 30, mass: 0.99 }}
+            initial={{ opacity: 0, x: -10000 * (i + 1) }}
+            animate={{ opacity: 1, x: 0 }}
+            style={{
+              color: "#000",
+              textDecoration: "none",
+              fontSize: "14px",
+              fontWeight: "600",
+              marginLeft: "10px",
+              lineHeight: 2,
+              marginRight: "0.5rem",
+            }}
+          >
+            {list.icon}
+            {list.title}
+          </motion.span>
+        </motion.li>
       ))}
     </>
   );
