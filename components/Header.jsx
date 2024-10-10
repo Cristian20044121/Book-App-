@@ -4,14 +4,19 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header style={headerStyle}>
+    <header
+      style={{ padding: "1rem 1re 1rem 0" }}
+      className="flex justify-between items-center bg-gray-50 md:p-8 sm:p-3"
+    >
       <motion.div
         style={leftContainerStyle}
         transition={{ type: "spring", damping: 18, mass: 0.75 }}
         initial={{ opacity: 0, x: -1000 }}
         animate={{ opacity: 1, x: 0 }}
       >
-        <h1 style={bookTitleStyle}>Book App</h1>
+        <h1 className="text-5xl font-bold text-gray-900 sm:text-3xl ml-10">
+          Book App
+        </h1>
         <motion.input
           type="text"
           placeholder="Tell me what you like to read and we will get that ...."
@@ -41,22 +46,18 @@ export default function Header() {
   );
 }
 
-const headerStyle = {
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  padding: "1rem 1re 1rem 0",
-  color: "#fff",
-};
+// const headerStyle = {
+//   display: "flex",
+//   justifyContent: "space-between",
+//   alignItems: "center",
+//   padding: "1rem 1re 1rem 0",
+//   color: "#fff",
+//   //
+// };
 
 const leftContainerStyle = {
   display: "flex",
   alignItems: "center",
-};
-
-const bookTitleStyle = {
-  marginRight: "2rem",
-  color: "#000",
 };
 
 const searchInputStyle = {
