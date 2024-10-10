@@ -5,6 +5,7 @@ import SideBar from "../components/Sidebar";
 import { books } from "@/constants/mockData";
 import { motion } from "framer-motion";
 import styles from "./page.module.css";
+
 export default function Home() {
   return (
     <main className={styles.main}>
@@ -19,14 +20,14 @@ export default function Home() {
           <div className={styles.grouper}>
             <h1 className={styles.title}>ALL BOOKS</h1>
             <ul className={styles.ulGroupStyle}>
-              {books.map((book, i) => (
+              {books.map((book) => (
                 <motion.li
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", damping: 50, mass: 0.75 }}
-                  initial={{ opacity: 0, x: 200 * (i + 1) }}
+                  initial={{ opacity: 0, x: 200 }}
                   animate={{ opacity: 1, x: 0 }}
-                  key={i}
+                  key={book.id} // Cambié el key a book.id
                 >
                   <a
                     href={`/book/${book.id}`}
@@ -34,8 +35,9 @@ export default function Home() {
                   >
                     <BookCard
                       title={book.title}
-                      coverImage={book.image}
+                      coverImage={book.image} // Asegúrate de que esto sea correcto
                       description={book.description}
+                      onClick={() => console.log(`Clicked on ${book.title}`)} // Puedes agregar un onClick si es necesario
                     />
                   </a>
                 </motion.li>

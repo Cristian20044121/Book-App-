@@ -1,10 +1,20 @@
-"use client";
-export default function BookCard({
+"use client"; // Declaración para asegurarse de que este archivo se ejecute en el lado del cliente
+import React from "react";
+
+// Definir la interfaz para los props
+interface BookCardProps {
+  title: string; // Título del libro, tipo string
+  description: string; // Descripción del libro, tipo string
+  coverImage: string; // URL de la imagen de la portada, tipo string
+  onClick?: () => void; // Función opcional para manejar el evento de click
+}
+
+const BookCard: React.FC<BookCardProps> = ({
   title,
   description,
   coverImage,
   onClick,
-}: any) {
+}) => {
   return (
     <div style={cardStyle} onClick={onClick}>
       <img src={coverImage} alt={title} style={imageStyle} />
@@ -14,7 +24,7 @@ export default function BookCard({
       </div>
     </div>
   );
-}
+};
 
 const cardStyle = {
   width: "200px",
@@ -48,3 +58,5 @@ const descriptionStyle = {
   fontSize: "0.8rem",
   color: "#888",
 };
+
+export default BookCard; // Asegúrate de que sea exportación por defecto
