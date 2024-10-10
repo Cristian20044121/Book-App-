@@ -26,7 +26,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/BookCard.tsx"
+    "components/BookCard.tsx",
+    "components/Header.jsx"
   ],
   "exclude": ["node_modules"]
 }
