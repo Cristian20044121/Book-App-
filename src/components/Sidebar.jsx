@@ -24,7 +24,11 @@ export const Sidebar = () => {
         >
           <ul style={listStyle}>
             {
-              <motion.li style={listItemStyle} whileHover={{ scale: 1.1 }}>
+              <motion.li
+                style={listItemStyle}
+                whileHover={{ scale: 1.1 }}
+                key={i}
+              >
                 <motion.span
                   transition={{ type: "spring", damping: 30, mass: 0.99 }}
                   initial={{ opacity: 0, x: -10000 * (i + 1) }}

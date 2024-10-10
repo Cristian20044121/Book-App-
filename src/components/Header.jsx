@@ -76,10 +76,10 @@ const avatarStyle = {
   height: "40px",
   borderRadius: "50%",
 };
-const settingsLinkStyle = {
-  color: "#fff",
-  textDecoration: "none",
-};
+// const settingsLinkStyle = {
+//   color: "#fff",
+//   textDecoration: "none",
+// };
 // const settingsIconStyle = {
 //   fontSize: "24px",
 //   color: "#000",
