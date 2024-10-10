@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 // import "./globals.css";
 // pages/index.js
 // import Link from 'next/link';
-import {Home} from '../src/components/Home';
+import { Home } from "../components/Home";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -21,8 +21,7 @@ export const metadata: Metadata = {
   description: "Book app",
 };
 
-export default function RootLayout({
-}: Readonly<{
+export default function RootLayout({}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
@@ -30,7 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Home/>
+        <Home />
       </body>
     </html>
   );
