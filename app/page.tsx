@@ -9,7 +9,7 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className="mt-10">
+      <div className="mt-2">
         <Header />
 
         <div className="mt-10">

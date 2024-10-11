@@ -1,10 +1,13 @@
 .main {
-  width: 95%;
+  width: 100%;
   margin: auto;
+  background: white;
 }
 
 .containerStyle {
   display: flex;
+  width: 98%;
+  margin: 0 auto;
   justifycontent: space-between;
   alignitems: flex-start;
 }
