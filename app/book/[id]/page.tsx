@@ -112,7 +112,8 @@ export default function BookPage() {
             <i style={{ fontSize: "20px", cursor: "pointer" }} className="fas fa-chevron-left"></i>
           </div>
           <div>
-            <h2 className="text-blue-700 md:text-2xl font-bold">Book: "{selectedBook.title}"</h2> <br/>
+            <h2 className="text-blue-700 md:text-2xl font-bold"><h2 className='text-blue-700 md:text-2xl font-bold'>Book: &quot;{selectedBook.title}&quot;</h2>
+            </h2> <br/>
           </div>
           <div className='flex gap-5 justify-center'>
             
@@ -141,4 +142,3 @@ export default function BookPage() {
   );
 }
 
-const iconStyle = { marginRight: "20px", fontSize: "20px" };

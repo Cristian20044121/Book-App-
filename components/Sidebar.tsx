@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { FaHome, FaEnvelope, FaInfoCircle, FaCog, FaStar, FaEye } from "react-icons/fa";
+import { FaHome, FaEnvelope, FaInfoCircle, FaCog} from "react-icons/fa";
 
 import Link from "next/link";
 
