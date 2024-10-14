@@ -74,7 +74,7 @@ export default function BookPage() {
       transition={{ type: "spring", damping: 40, mass: 0.75 }}
       initial={{ opacity: 0, x: 1000 }}
       animate={{ opacity: 1, x: 0 }}
-      className="bg-gray-200"
+      className="bg-gray-200 xs:p-1"
     >
       <motion.section
         transition={{ type: "spring", damping: 44, mass: 0.75 }}
@@ -83,7 +83,7 @@ export default function BookPage() {
         style={{ padding: "1rem 1rem 1rem 0" }}
         className="bg-gray-50 md:p-8 sm:p-3 border flex justify-between"
       >
-        {menuVisible && ( // Mostrar el menú solo si menuVisible es verdadero
+        {menuVisible && ( 
 
 
           <div>
@@ -93,9 +93,9 @@ export default function BookPage() {
                 transition={{ type: "spring", damping: 22, mass: 0.99 }}
                 initial={{ opacity: 0, x: -2000 * (i + 1) }}
                 animate={{ opacity: 1, x: 0 }}
-                className=""
+                className="p-2"
               >
-                <ul className="w-full bg-indigo-500 px-4 py-3.5 font-bold text-white hover:bg-indigo-600 mt-5 cursor-pointer">
+                <ul className="w-full bg-indigo-500 px-4 py-3.5 font-bold text-white hover:bg-indigo-600 mt-5 cursor-pointer xs:p-0">
                   <motion.li whileHover={{ scale: 1.1 }} className="">
                     <Link href={list.href} className="flex items-center gap-3 p-2">
                       {list.icon}
