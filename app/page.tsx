@@ -17,9 +17,9 @@ export default function Home() {
             <section className={styles.content}>
               <SideBar />
             </section>
-
-            <div className={styles.grouper}>
-              <h1 className={styles.title}>ALL BOOKS</h1>
+    <div className=" md:ml-5 md:bg-gray-100 rounded-xl">
+              <h1 className='text-4xl md:mt-2 font-circular-medium tracking-tight text-gray-900 sm:text-5xl font-semibold md:ml-12'>ALL <span className="text-4xl font-circular-medium text-blue-500 tracking-tight sm:text5xl">BOOKS</span></h1>
+    <div className='flex  md:justify-center items-center mx-auto md:w-11/12 md:mt-8'>
               <ul className={styles.ulGroupStyle}>
                 {books.map((book) => (
                   <motion.li
@@ -45,6 +45,8 @@ export default function Home() {
                 ))}
               </ul>
             </div>
+    </div>
+            
           </div>
         </div>
       </div>

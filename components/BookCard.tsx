@@ -16,11 +16,11 @@ const BookCard: React.FC<BookCardProps> = ({
   onClick,
 }) => {
   return (
-    <div style={cardStyle} onClick={onClick}>
+    <div style={cardStyle} onClick={onClick} className="border bg-white hover:bg-gray-200"> 
       <img src={coverImage} alt={title} style={imageStyle} />
-      <div style={contentStyle}>
-        <h3 style={titleStyle}>{title}</h3>
-        <p style={descriptionStyle}>{description}</p>
+      <div className=" mt-4">
+        <h2 className="text-xl tracking-wide text-black">{title}</h2>
+        <p className="text-xs text-black mt-2">{description}</p>
       </div>
     </div>
   );
@@ -30,12 +30,12 @@ const cardStyle = {
   width: "200px",
   padding: "1rem",
   borderRadius: "5px",
-  backgroundColor: "#f8eadd",
   boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
   cursor: "pointer",
   transition: "transform 0.3s ease",
   marginBottom: "1.5rem",
   marginRight: "1.6rem",
+  
 };
 
 const imageStyle = {
@@ -44,19 +44,10 @@ const imageStyle = {
   borderRadius: "5px",
 };
 
-const contentStyle = {
-  marginTop: "1rem",
-};
 
-const titleStyle = {
-  fontSize: "1.2rem",
-  marginBottom: "0.5rem",
-  color: "#000",
-};
 
-const descriptionStyle = {
-  fontSize: "0.8rem",
-  color: "#888",
-};
+
+
+
 
 export default BookCard; // Asegúrate de que sea exportación por defecto
