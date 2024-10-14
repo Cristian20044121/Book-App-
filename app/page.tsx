@@ -28,7 +28,7 @@ export default function Home() {
                     transition={{ type: "spring", damping: 50, mass: 0.75 }}
                     initial={{ opacity: 0, x: 200 }}
                     animate={{ opacity: 1, x: 0 }}
-                    key={book.id} // Cambié el key a book.id
+                    key={book.id} 
                   >
                     <a
                       href={`/book/${book.id}`}
@@ -36,9 +36,9 @@ export default function Home() {
                     >
                       <BookCard
                         title={book.title}
-                        coverImage={book.image} // Asegúrate de que esto sea correcto
+                        coverImage={book.image} 
                         description={book.description}
-                        onClick={() => console.log(`Clicked on ${book.title}`)} // Puedes agregar un onClick si es necesario
+                        onClick={() => console.log(`Clicked on ${book.title}`)}
                       />
                     </a>
                   </motion.li>
